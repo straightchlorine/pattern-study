@@ -147,8 +147,9 @@ def solution_tortoise(head: Optional[ListNode]) -> bool:
     tortoise = head
     hare = head
 
+    # optimization - do not check tortoise
 
-    while tortoise is not None and hare.next is not None and hare is not None:
+    while hare is not None and hare.next is not None:
         tortoise = tortoise.next
         hare = hare.next.next
 
